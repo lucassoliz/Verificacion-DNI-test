@@ -4,7 +4,7 @@
 #include <stdbool.h>
 
 void limpiarBuffer(){
-    while (getchar() != '\n'); //limpiamos el buffer de entrada
+    while (getchar() != '\n');
 }
 
 /* Verificamos que tenga 8 digitos si o si, y que compruebe que todos
@@ -47,16 +47,15 @@ bool validarDigitoVerificador(char dni[]){
 int main(){
     char dni[9];
     char opcion;
-    
     do {
         printf("ingrese el dni: ");
         scanf("%8s", dni);
         limpiarBuffer();
         
-        if(validarFormatoDNI(dni)){
-            if(validarDigitoVerificador(dni)){
+        if (validarFormatoDNI(dni)){
+            if (validarDigitoVerificador(dni)){
                 printf("DNI valido\n");
-            }else{
+            } else {
                 printf("DNI no valido\n");
             }
         }
@@ -64,8 +63,7 @@ int main(){
         printf("Desea validar otro DNI? (S/N): ");
         opcion = getchar();
         limpiarBuffer();
-        
-    } while(opcion == 'S' || opcion == 's');
-    
+    } 
+        while(opcion == 'S' || opcion == 's');
     return 0;
 }
