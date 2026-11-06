@@ -1,3 +1,2 @@
 # Verificacion-DNI-test
-testeo
-.
+Repositorio con fines didacticos y testeo con el lenguaje C
